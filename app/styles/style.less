@@ -1,0 +1,421 @@
+//Анимации
+@keyframes work{
+  0% {transform: scale(1);}
+  100% {transform: scale(1.1);}
+}
+
+
+//Переменные
+
+@bg: #2a2a2a;
+@l-col-color: #1d1d1d;
+@accent: #ed706e;
+@header-text-color: #8c8c8c;
+@h3-color: #646464;
+@text-color: #a0a0a0;
+@btn-color: #404040; 
+@btn-active-color: #1e1e1e;
+@arial: Arial, Helvetica, sans-serif;
+@wideBold: NovecentoWideDemiBold, Helvetica, sans-serif;
+@wideNorm: NovecentoWideNormal, Helvetica, sans-serif;
+
+
+//Fonts
+@font-face {
+    font-family: NovecentoWideDemiBold;
+    src: url(/fonts/NovecentoWideDemiBold.otf);
+}
+
+@font-face {
+    font-family: NovecentoWideNormal;
+    src: url(/fonts/NovecentoWideNormal.otf);
+}
+
+//Примеси
+
+.line(){
+  content: '';
+  position: absolute;
+  display: block;
+  width: 11.45vw;
+  height: 0.1vw;
+  background-color: darken(#1d1d1d, 5%);
+  box-shadow: 0 0.1vw darken(#505050, 10%);
+}
+
+.text(@f-s, @l-h, @color, @font) {
+  font-family: @font;
+  font-size: @f-s;
+  line-height: @l-h;
+  color: @color;
+}
+
+.btn(){
+  width: 2.22vw;
+  height: 2.22vw;
+  background-color: @btn-color;
+  box-shadow: 0 0.07vw 0 0 #1f1f1f;
+  border: none;
+  border-radius: 0.21vw;
+}
+
+.btn-hover(){
+  background-color: @accent;
+}
+
+.btn-active(){
+  background-color: @btn-active-color;
+  box-shadow: inset 0 0 0.07vw 0 #151515,
+              0 0.07vw 0 0 #353535;
+}
+
+
+//Общие стили
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  min-height: 117.3vw;  
+  background-color: @bg;
+  color: #fff;
+}
+
+
+// Правая колонка
+
+.page-main{
+  position: relative;
+  min-width: 47.21vw;
+  padding: 3.47vw 17.36vw 3.47vw 1.74vw;
+  box-sizing: padding-box;
+}
+
+
+// Кнопка "Наверх страницы"
+.page-main__btn-top{
+  position: absolute;
+  bottom: 4vw;
+  right: 17.36vw;
+  
+  background-image: url(/img/Sprite/key-console.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.9vw 0.9vw;
+  .btn;
+  
+  a{
+    display: block;
+    width: 2vw;
+    height: 2vw;
+    color: transparent;
+    text-decoration: none;
+  }
+  &:hover{
+  .btn-hover;
+  }
+  &:active{
+  .btn-active;
+  }
+}
+
+
+//Раздел с работами
+.works{
+  position: relative;
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  padding-bottom: 4vw;
+  
+  div:nth-child(11),
+  div:nth-child(9),
+  div:nth-child(7){
+    order: 3;
+  }
+  
+  div:nth-child(13),
+  div:nth-child(15),
+  div:nth-child(17){
+    order: 5;
+  }
+  
+  div:nth-child(19),
+  div:nth-child(21){
+    order: 7;
+  }
+  
+  div:nth-child(5),
+  div:nth-child(11),
+  div:nth-child(17){
+    margin-right: -3vw;
+  }
+}
+
+
+// Миниатюры работ
+
+div[class^=works__min-]{
+  display: block;
+  position: relative;
+  width: 14vw;
+  height: 14.58vw;
+
+  margin-bottom: 2.78vw;
+  margin-right: 3.7vw;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+  z-index: 1;
+  
+  figure{
+    position: relative;
+    width: 100%;
+    height: 10.42vw;
+    
+    border-radius: 0.21vw;
+    transition:all 0.3s ease;
+    z-index: 2;
+    
+    img{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    
+    &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 10.42vw;
+
+      border-radius: 0.25vw;
+      background-color: @accent;
+      opacity: 0;
+      z-index: 3;
+    }
+    
+    &:after{
+      content: '';
+      position: absolute;
+      top: 3.1vw;
+      right: 4.5vw;
+
+      display: block;
+      width: 4.5vw;
+      height: 4.5vw;
+
+      background-image: url(/img/Sprite/zooming.svg);
+      background-repeat: no-repeat;
+      background-size: 4.5vw 4.5vw;
+      
+      opacity: 0;
+      z-index: 4;
+    }
+  }
+  
+  h3{
+    margin-top: 1.04vw;
+
+    .text(0.97vw, 1.46vw, @h3-color, @wideBold);
+    text-transform: uppercase;
+  }
+  &:hover h3{
+    color: @accent;
+  }  
+
+  p{
+    margin-top: 0.14vw;
+
+    .text(0.69vw, 1.46vw, @text-color, @wideNorm);
+    text-transform: uppercase;
+  }
+}
+
+// Эффекты при наведении на img
+div[class^=works__min-] figure:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.14vw 0.55vw 0 #000;
+  
+  &:before{
+    opacity: 0.8;
+  }
+  
+  &:after{
+    opacity: 1;
+  }
+}
+
+
+// Эффекты при нажатии на img
+div[class^=works__min-] figure:active {
+  transform: scale(1.0);
+  box-shadow: 0 0.14vw 0.55vw 0 #000;
+  
+  &:before{
+    background-color: darken(@accent,60%);
+    opacity: 0.8;
+  }
+  
+  &:after{
+    opacity: 1;
+  }
+}
+
+
+// Работы нормальный размер
+div[class^=works__max-]{
+  display: none;
+  width: 52vw;
+  margin-bottom: 2.78vw;
+  margin-right: 0vw;
+  order: 2;
+
+  img{
+    width: 31.25vw;
+    border-radius: 0.35vw;
+  }
+
+  .work__description{
+  float: right;
+  width: 13.89vw;
+  min-height: 32vw;
+  margin-right: 0vw;
+
+  .text(0.97vw, 1.6vw, @header-text-color, @arial);
+
+  h3{
+    .text(1.67vw, 2.08vw, #fff, @wideBold);
+    text-transform: uppercase;
+  }
+
+  p.date{
+    .text(0.83vw, 1.94vw, @text-color, @wideNorm);
+    text-transform: uppercase;
+  }
+
+  a{
+    .text(0.83vw, 1.94vw, @text-color, @wideNorm);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover{
+      color: @accent;
+      text-decoration: underline;
+    }
+  }
+
+  p:nth-child(4){
+    margin-bottom: 1.39vw;
+  }
+
+  p:nth-child(4):first-line{
+    color: #fff;
+  }
+
+  p:last-child{
+    position: relative;
+    margin-top: 1.25vw;
+    margin-bottom: 0.5vw;
+
+    .text(0.83vw, 1.94vw, @text-color, @wideNorm);
+    text-transform: uppercase;
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -2.5vw;
+      
+      display: block;
+      width: 8.34vw;
+      height: 2.08vw;
+      
+      background-image: url(/img/Sprite.png);
+      background-repeat: no-repeat;
+      background-size: 8.33vw 7.37vw;
+      background-position: -0.21vw -5.11vw;
+     }    
+   }
+  }
+}
+
+
+// Кнопки слайдера
+.slider-btn{
+  position: absolute;
+  top: 17.36vw;
+  right: -3.47vw;
+  
+  display: none;
+  width: 2.22vw;
+  height: 8.68vw;
+  
+  order: 9;
+  
+  .close-slide{
+    display: block;
+    margin-bottom: 1.39vw;
+    
+    .btn;
+    background-image: url(/img/Sprite/close-browser.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.9vw;    
+  }
+  
+  .next-slide{
+    display: block;
+    margin-bottom: 0.35vw;
+    
+    .btn;
+    background-image: url(/img/Sprite/right-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.9vw;    
+  }
+  
+  .prew-slide{
+    display: block;
+    .btn;
+    background-image: url(/img/Sprite/arrow-left-direction.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.9vw;    
+  }
+  
+  //Эффекты наведения на кнопки слайдера  
+  .close-slide:hover,
+  .next-slide:hover,
+  .prew-slide:hover{
+    .btn-hover;
+  }
+  
+  //Эффекты нажатия на кнопки слайдера
+  .close-slide:active,
+  .next-slide:active,
+  .prew-slide:active{
+    .btn-active;
+  }
+}
+
+.works .works__sort-list{
+  img{
+    width: 16vw;
+  }
+  .work__description {
+    width: 30vw;
+    min-height: 22vw;
+  }
+}
