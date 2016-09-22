@@ -1,0 +1,1027 @@
+/* font-family: "PTSansRegular"; */
+@font-face {
+    font-family: "PTSansRegular";
+    src: url("../fonts/PTSansRegular.eot");
+    src: url("../fonts/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansRegular.woff") format("woff"),
+    url("../fonts/PTSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "PTSansItalic"; */
+@font-face {
+    font-family: "PTSansItalic";
+    src: url("../fonts/PTSansItalic.eot");
+    src: url("../fonts/PTSansItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansItalic.woff") format("woff"),
+    url("../fonts/PTSansItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "PTSansBold"; */
+@font-face {
+    font-family: "PTSansBold";
+    src: url("../fonts/PTSansBold.eot");
+    src: url("../fonts/PTSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansBold.woff") format("woff"),
+    url("../fonts/PTSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+sansN = PTSansRegular
+sansB = PTSansBold
+sansI = PTSansItalic
+blueC = #81b3d2
+grayC = #eeeeee
+darkgrayC = #d6d6d6
+textC = #333333
+brownC = #766357
+formC = #f2f2f2
+
+fontVal(fSize = 14px, lSize = 14px)
+  font-size fSize
+  line-height lSize
+  text-transform uppercase
+  
+placeholder(prop, value)
+  &::-webkit-input-placeholder
+   {prop} value
+  &::-moz-input-placeholder
+   {prop} value
+
+
+html,
+body,
+article,
+section,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p
+  padding 0
+  margin 0
+  box-sizing border-box
+
+
+body
+  width 100%
+  min-width 320px
+  margin 0 auto
+  
+  font-family sansN
+  fontVal()
+  color textC
+  
+  background-color #fff
+  
+.main-content
+  width 100%
+  
+
+@media screen and (min-width: 0px) and (max-width: 767px)
+  .main-header
+    width 100%
+    height 139.375vw
+    
+    box-shadow 0 0 -5vw 0 rgba(#000, 0.8)
+    //margin-top 68.4vw
+  
+  .main-nav
+    position relative
+    
+    width 100%
+    height 17.5vw
+    
+    &:before
+      content ''
+      position absolute
+      bottom 100%
+      left 0
+
+      display none
+      width 100%
+      height 68.4vw
+    
+  .main-nav__btn-burger
+    position absolute
+    top 5.3125vw
+    right 6.25vw
+    
+    display block
+    width 7.1875vw
+    height 6.875vw
+    
+    background-color rgba(#000, 0.3)
+
+  .main-nav__btn-cross
+    position absolute
+    bottom 74vw
+    right 6.25vw
+    
+    display none
+    width 6.875vw
+    height 6.875vw
+    
+    background-color rgba(#000, 0.5)
+    z-index 3
+    
+  .menu-item
+    position absolute
+    bottom 100%
+    
+    display block
+    width 100%
+    padding 2.1875vw 0
+    
+    fontVal(5.625vw, 12.5vw)
+    font-family sansB
+    font-weight bold
+    color #fff
+    text-align center
+    
+    background-color blueC
+    border-bottom 0.3125vw solid rgba(#000, 0.5)
+    border-top 0.3125vw solid rgba(#fff, 0.5)
+    
+    &:first-child
+      bottom 68.95vw
+      border-top none
+      
+    &:nth-child(2)
+      bottom 51.8vw
+      
+    &:nth-child(4)
+      bottom 34.6875vw
+      
+    &:last-child
+      border-bottom none
+    
+  .logo
+    position relative
+    display block
+    width 42.8125vw
+    height 21.875vw
+
+    margin 0 auto
+
+    border none
+    background-color rgba(#000, 0.3)
+    
+  .menu-item--hide
+    display block
+    
+  .header__content
+    height 121.875vw
+    
+    background-color #e1eef7
+    
+  .page__banner
+    position relative
+    height 74.375vw
+    padding 12.5vw 6.25vw 0
+    
+    text-align center
+    fontVal(4.375vw, 8.125vw)
+    
+    .page__tagline
+      margin-bottom 8.75vw
+      
+      font-family sansB
+      font-weight bold
+      fontVal(5.625vw, 8.125vw)
+      color #000
+      
+    .page__paragraph
+      margin-bottom 12.8125vw
+      
+      &:before
+        content ''
+        position absolute
+        bottom 100%
+        left 0
+
+        display block
+        width 0
+        height 0
+
+        border-top 7.8125vw solid transparent
+        border-left 48.55vw solid #fff
+        border-right 48.55vw solid #fff
+        border-bottom none
+
+      &:after
+        content ''
+        position absolute
+        bottom 0
+        left 0
+
+        display block
+        width 0
+        height 0
+
+        border-top 5vw solid transparent
+        border-left 48.55vw solid blueC
+        border-right 48.55vw solid blueC
+        border-bottom none
+      
+    
+  .reason__mean
+    position relative
+    height 60.3125vw
+    padding 13.4375vw 6.25vw 12.5vw
+    margin-bottom 80vw
+    
+    fontVal(4.375vw, 6.5625vw)
+    color #fff
+    text-align center
+    
+    background-color blueC
+    
+    &:after
+      content ''
+      position absolute
+      top 100%
+      left 0
+      
+      display block
+      width 100%
+      height 80vw
+      
+      background-color rgba(#000, 0.3)
+    
+    .reason__tagline
+      margin-bottom 4.0625vw
+      
+      font-family sansB
+      font-weight bold
+      fontVal(6.5625vw, 6.5625vw)
+      
+    .reason__number
+      display block
+      margin-bottom 4.0625vw
+      
+  .chips-section
+    width 100%
+    height 131.25vw
+    padding 9.375vw 6.25vw
+    
+    .chip
+      position relative
+      padding-top 3.125vw
+      padding-left 15.625vw
+      margin-bottom 6.25vw
+      
+      .chip__headline
+        margin 0
+        margin-bottom 3.4375vw
+        
+        font sansB
+        fontVal(5.625vw, 8.125vw)
+        color #000
+        
+      .chip__content
+        fontVal(4.375vw, 6.5625vw)
+        
+    .chip--house:before
+      content ''
+      position absolute
+      top 0
+      left 0.625vw
+      
+      display block
+      width 11.5625vw
+      height 11.5625vw
+      
+      background-color rgba(#000, 0.3)
+      
+    .chip--food:before
+      content ''
+      position absolute
+      top 0
+      left 1.5625vw
+      
+      display block
+      width 10vw
+      height 11.875vw
+      
+      background-color rgba(#000, 0.3)
+      
+    .chip--souvenir:before
+      content ''
+      position absolute
+      top 0
+      left 0
+      
+      display block
+      width 11.5625vw
+      height 10.9375vw
+      
+      background-color rgba(#000, 0.3)
+      
+  .reason__mean--inline
+    margin-bottom 0
+    
+    color #000
+    
+    background-color grayC
+    
+    &:last-of-type:after
+      display none
+    
+    &:after
+      bottom 0.15vw
+      left 6.25vw
+      
+      width 86vw
+      height 0.3125vw
+      
+      background-color darkgrayC
+      z-index 3
+      
+  .search-form
+    width 100%
+    padding-bottom 15.3125vw
+    
+    box-shadow 0 0 5vw 0 rgba(#000, 0.8)
+    
+    .search-form__tagline
+      margin-top 8.75vw
+      margin-bottom 5.9375vw
+      
+      font-family sansB
+      fontVal(6.5625vw, 8.125vw)
+      color #000
+      text-align center
+      
+    .search-form__content
+      margin-bottom 8.125vw
+      
+      text-align center
+      fontVal(4.375vw, 7.5vw)
+      
+    .search-form__legend
+      display block
+      width 100%
+      padding 9.375vw 0
+      margin-bottom 7.5vw
+      
+      font-family sansB
+      fontVal(4.7vw, 8.125vw)
+      text-align center
+      color #fff
+      font-weight bold
+      
+      background-color brownC
+      
+    label
+      display block
+      width 100%
+      padding 0 10.9375vw
+      margin-bottom 1.5625vw
+      
+      font-family sansB
+      fontVal(4.375vw, 8.125vw)
+      font-weight bold
+      color #000
+      
+      box-sizing border-box
+      
+    input
+      display block
+      width 87.5%
+      padding 4.375vw 11.875vw 4.375vw 4.8vw
+      margin 0 auto
+      margin-bottom 7.1875vw
+      
+      font-family sansB
+      fontVal(4.375vw, 3.125vw)
+      text-transform uppercase
+      font-weight bold
+      
+      border none
+      background-color grayC
+      box-sizing border-box
+      
+      placeholder(text-transform, uppercase)
+      placeholder(font, sansB)
+      placeholder(font-weight, bold)
+      placeholder(color, #000)
+    
+    .box-grown
+      float left
+      width 35.625vw
+      padding 0
+      margin 0
+      margin-left 6.25vw
+      margin-bottom 14.375vw
+      
+      .search-form__label-grown
+        padding-left 3.125vw
+        
+      .search-form__grown
+        margin 0
+      
+    .box-children
+      float right
+      width 35.625vw
+      padding 0
+      margin 0
+      margin-right 3.125vw
+      
+      .search-form__label-children
+        padding-left 3.125vw
+        
+      .search-form__children
+        margin 0
+        margin-right 0
+      
+    .search-form__btn
+      display block
+      width 87.5%
+      
+      padding 6.25vw 0
+      margin 0 auto
+      margin-top 14.375vw
+      
+      font-family sansB
+      fontVal(6.5625vw, 5.625vw)
+      text-align center
+      color #fff
+      font-weight bold
+      
+      clear both
+      background-color blueC
+      
+  .main-footer
+    position relative
+    width 100%
+    height 185.3125vw
+    
+    .main-footer__map
+      width 100%
+      height 100%
+      
+      background-color rgba(#000, 0.4)
+      
+    .main-footer__content
+      position absolute
+      bottom 0
+      
+      width 100%
+      height 72.8125vw
+      padding 0 6.25vw
+      
+      text-align center
+      background-color rgba(#fff, 0.8)
+      
+      .main-footer__tag
+        margin-top 9.6875vw
+        margin-bottom 13.125vw
+        
+        font-family sansB
+        font-weight bold
+        fontVal(6.5625vw, 4.6875vw)
+        color #000
+        
+      .social-btn
+        display block
+        width 47.1875vw
+        height 15vw
+        margin 0 auto
+        margin-bottom 12.8125vw
+        
+      .social-btn__twitter
+        display inline-block
+        width 14.375vw
+        height 15vw
+        margin-right 1.875vw
+        
+        background-color rgba(#000, 0.5)
+        
+      .social-btn__facebook
+        display inline-block
+        width 14.375vw
+        height 15vw
+        margin-right 1.875vw
+        
+        background-color rgba(#000, 0.5)
+        
+      .social-btn__youtube 
+        display inline-block
+        width 14.375vw
+        height 15vw
+        
+        background-color rgba(#000, 0.5)
+        
+      .copywrite
+        display block
+        height 10.3125vw
+        padding-top -30px
+        
+        vertical-align middle
+        font-family sansN
+        fontVal(4.375vw, 8.125vw)
+        
+        .copywright__creator
+          display inline-block
+          width 8.4375vw
+          height 10.3125vw
+          
+          vertical-align middle
+          background-color rgba(#000, 0.5)
+          overflow hidden
+          
+        .copywright__customer
+          display inline-block
+          width 8.4375vw
+          height 10.3125vw
+          
+          vertical-align middle
+          background-color rgba(#000, 0.5)
+          overflow hidden
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+  .main-header
+    width 100%
+    height 139.375vw
+    
+    box-shadow 0 0 -5vw 0 rgba(#000, 0.8)
+    //margin-top 68.4vw
+  
+  .main-nav
+    position relative
+    
+    width 100%
+    height 17.5vw
+    
+    &:before
+      content ''
+      position absolute
+      bottom 100%
+      left 0
+
+      display none
+      width 100%
+      height 68.4vw
+    
+  .main-nav__btn-burger
+    position absolute
+    top 5.3125vw
+    right 6.25vw
+    
+    display block
+    width 7.1875vw
+    height 6.875vw
+    
+    background-color rgba(#000, 0.3)
+
+  .main-nav__btn-cross
+    position absolute
+    bottom 74vw
+    right 6.25vw
+    
+    display none
+    width 6.875vw
+    height 6.875vw
+    
+    background-color rgba(#000, 0.5)
+    z-index 3
+    
+  .menu-item
+    position absolute
+    bottom 100%
+    
+    display block
+    width 100%
+    padding 2.1875vw 0
+    
+    fontVal(5.625vw, 12.5vw)
+    font-family sansB
+    font-weight bold
+    color #fff
+    text-align center
+    
+    background-color blueC
+    border-bottom 0.3125vw solid rgba(#000, 0.5)
+    border-top 0.3125vw solid rgba(#fff, 0.5)
+    
+    &:first-child
+      bottom 68.95vw
+      border-top none
+      
+    &:nth-child(2)
+      bottom 51.8vw
+      
+    &:nth-child(4)
+      bottom 34.6875vw
+      
+    &:last-child
+      border-bottom none
+    
+  .logo
+    position relative
+    display block
+    width 42.8125vw
+    height 21.875vw
+
+    margin 0 auto
+
+    border none
+    background-color rgba(#000, 0.3)
+    
+  .menu-item--hide
+    display block
+    
+  .header__content
+    height 121.875vw
+    
+    background-color #e1eef7
+    
+  .page__banner
+    position relative
+    height 74.375vw
+    padding 12.5vw 6.25vw 0
+    
+    text-align center
+    fontVal(4.375vw, 8.125vw)
+    
+    .page__tagline
+      margin-bottom 8.75vw
+      
+      font-family sansB
+      font-weight bold
+      fontVal(5.625vw, 8.125vw)
+      color #000
+      
+    .page__paragraph
+      margin-bottom 12.8125vw
+      
+      &:before
+        content ''
+        position absolute
+        bottom 100%
+        left 0
+
+        display block
+        width 0
+        height 0
+
+        border-top 7.8125vw solid transparent
+        border-left 48.55vw solid #fff
+        border-right 48.55vw solid #fff
+        border-bottom none
+
+      &:after
+        content ''
+        position absolute
+        bottom 0
+        left 0
+
+        display block
+        width 0
+        height 0
+
+        border-top 5vw solid transparent
+        border-left 48.55vw solid blueC
+        border-right 48.55vw solid blueC
+        border-bottom none
+      
+    
+  .reason__mean
+    position relative
+    height 60.3125vw
+    padding 13.4375vw 6.25vw 12.5vw
+    margin-bottom 80vw
+    
+    fontVal(4.375vw, 6.5625vw)
+    color #fff
+    text-align center
+    
+    background-color blueC
+    
+    &:after
+      content ''
+      position absolute
+      top 100%
+      left 0
+      
+      display block
+      width 100%
+      height 80vw
+      
+      background-color rgba(#000, 0.3)
+    
+    .reason__tagline
+      margin-bottom 4.0625vw
+      
+      font-family sansB
+      font-weight bold
+      fontVal(6.5625vw, 6.5625vw)
+      
+    .reason__number
+      display block
+      margin-bottom 4.0625vw
+      
+  .chips-section
+    width 100%
+    height 131.25vw
+    padding 9.375vw 6.25vw
+    
+    .chip
+      position relative
+      padding-top 3.125vw
+      padding-left 15.625vw
+      margin-bottom 6.25vw
+      
+      .chip__headline
+        margin 0
+        margin-bottom 3.4375vw
+        
+        font sansB
+        fontVal(5.625vw, 8.125vw)
+        color #000
+        
+      .chip__content
+        fontVal(4.375vw, 6.5625vw)
+        
+    .chip--house:before
+      content ''
+      position absolute
+      top 0
+      left 0.625vw
+      
+      display block
+      width 11.5625vw
+      height 11.5625vw
+      
+      background-color rgba(#000, 0.3)
+      
+    .chip--food:before
+      content ''
+      position absolute
+      top 0
+      left 1.5625vw
+      
+      display block
+      width 10vw
+      height 11.875vw
+      
+      background-color rgba(#000, 0.3)
+      
+    .chip--souvenir:before
+      content ''
+      position absolute
+      top 0
+      left 0
+      
+      display block
+      width 11.5625vw
+      height 10.9375vw
+      
+      background-color rgba(#000, 0.3)
+      
+  .reason__mean--inline
+    margin-bottom 0
+    
+    color #000
+    
+    background-color grayC
+    
+    &:last-of-type:after
+      display none
+    
+    &:after
+      bottom 0.15vw
+      left 6.25vw
+      
+      width 86vw
+      height 0.3125vw
+      
+      background-color darkgrayC
+      z-index 3
+      
+  .search-form
+    width 100%
+    padding-bottom 15.3125vw
+    
+    box-shadow 0 0 5vw 0 rgba(#000, 0.8)
+    
+    .search-form__tagline
+      margin-top 8.75vw
+      margin-bottom 5.9375vw
+      
+      font-family sansB
+      fontVal(6.5625vw, 8.125vw)
+      color #000
+      text-align center
+      
+    .search-form__content
+      margin-bottom 8.125vw
+      
+      text-align center
+      fontVal(4.375vw, 7.5vw)
+      
+    .search-form__legend
+      display block
+      width 100%
+      padding 9.375vw 0
+      margin-bottom 7.5vw
+      
+      font-family sansB
+      fontVal(4.7vw, 8.125vw)
+      text-align center
+      color #fff
+      font-weight bold
+      
+      background-color brownC
+      
+    label
+      display block
+      width 100%
+      padding 0 10.9375vw
+      margin-bottom 1.5625vw
+      
+      font-family sansB
+      fontVal(4.375vw, 8.125vw)
+      font-weight bold
+      color #000
+      
+      box-sizing border-box
+      
+    input
+      display block
+      width 87.5%
+      padding 4.375vw 11.875vw 4.375vw 4.8vw
+      margin 0 auto
+      margin-bottom 7.1875vw
+      
+      font-family sansB
+      fontVal(4.375vw, 3.125vw)
+      text-transform uppercase
+      font-weight bold
+      
+      border none
+      background-color grayC
+      box-sizing border-box
+      
+      placeholder(text-transform, uppercase)
+      placeholder(font, sansB)
+      placeholder(font-weight, bold)
+      placeholder(color, #000)
+    
+    .box-grown
+      float left
+      width 35.625vw
+      padding 0
+      margin 0
+      margin-left 6.25vw
+      margin-bottom 14.375vw
+      
+      .search-form__label-grown
+        padding-left 3.125vw
+        
+      .search-form__grown
+        margin 0
+      
+    .box-children
+      float right
+      width 35.625vw
+      padding 0
+      margin 0
+      margin-right 3.125vw
+      
+      .search-form__label-children
+        padding-left 3.125vw
+        
+      .search-form__children
+        margin 0
+        margin-right 0
+      
+    .search-form__btn
+      display block
+      width 87.5%
+      
+      padding 6.25vw 0
+      margin 0 auto
+      margin-top 14.375vw
+      
+      font-family sansB
+      fontVal(6.5625vw, 5.625vw)
+      text-align center
+      color #fff
+      font-weight bold
+      
+      clear both
+      background-color blueC
+      
+  .main-footer
+    position relative
+    width 100%
+    height 185.3125vw
+    
+    .main-footer__map
+      width 100%
+      height 100%
+      
+      background-color rgba(#000, 0.4)
+      
+    .main-footer__content
+      position absolute
+      bottom 0
+      
+      width 100%
+      height 72.8125vw
+      padding 0 6.25vw
+      
+      text-align center
+      background-color rgba(#fff, 0.8)
+      
+      .main-footer__tag
+        margin-top 9.6875vw
+        margin-bottom 13.125vw
+        
+        font-family sansB
+        font-weight bold
+        fontVal(6.5625vw, 4.6875vw)
+        color #000
+        
+      .social-btn
+        display block
+        width 47.1875vw
+        height 15vw
+        margin 0 auto
+        margin-bottom 12.8125vw
+        
+      .social-btn__twitter
+        display inline-block
+        width 14.375vw
+        height 15vw
+        margin-right 1.875vw
+        
+        background-color rgba(#000, 0.5)
+        
+      .social-btn__facebook
+        display inline-block
+        width 14.375vw
+        height 15vw
+        margin-right 1.875vw
+        
+        background-color rgba(#000, 0.5)
+        
+      .social-btn__youtube 
+        display inline-block
+        width 14.375vw
+        height 15vw
+        
+        background-color rgba(#000, 0.5)
+        
+      .copywrite
+        display block
+        height 10.3125vw
+        padding-top -30px
+        
+        vertical-align middle
+        font-family sansN
+        fontVal(4.375vw, 8.125vw)
+        
+        .copywright__creator
+          display inline-block
+          width 8.4375vw
+          height 10.3125vw
+          
+          vertical-align middle
+          background-color rgba(#000, 0.5)
+          overflow hidden
+          
+        .copywright__customer
+          display inline-block
+          width 8.4375vw
+          height 10.3125vw
+          
+          vertical-align middle
+          background-color rgba(#000, 0.5)
+          overflow hidden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
