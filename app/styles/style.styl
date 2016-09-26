@@ -83,13 +83,40 @@ body
   width 100%
   
 
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none; 
+  margin: 0; 
+
 @media screen and (min-width: 0px) and (max-width: 767px)
+  .body
+    width 100%
+    min-width 320px 
+    
   .main-header
+    position relative
     width 100%
     height 139.375vw
     
-    box-shadow 0 0 -5vw 0 rgba(#000, 0.8)
-    //margin-top 68.4vw
+    box-shadow 0 -1vw 2vw -1vw rgba(#000, 0.3)
+    overflow hidden
+    
+    &:after
+        content ''
+        position absolute
+        bottom 0
+        left 0
+
+        display block
+        width 0
+        height 0
+
+        border-top 7.8125vw solid transparent
+        border-left 49.3vw solid #fff
+        border-right 49.3vw solid #fff
+        border-bottom none
   
   .main-nav
     position relative
@@ -116,19 +143,26 @@ body
     width 7.1875vw
     height 6.875vw
     
-    background-color rgba(#000, 0.3)
+    svg
+      fill blueC
+      width 100%
+      height 100%
 
   .main-nav__btn-cross
     position absolute
     bottom 74vw
     right 6.25vw
     
-    display none
+    display block
     width 6.875vw
     height 6.875vw
     
     background-color rgba(#000, 0.5)
     z-index 3
+    
+    svg 
+      width 100%
+      height 100%
     
   .menu-item
     position absolute
@@ -166,19 +200,83 @@ body
     display block
     width 42.8125vw
     height 21.875vw
-
+    
+    padding 0
     margin 0 auto
-
+    
+    background-color transparent
     border none
-    background-color rgba(#000, 0.3)
+    z-index 3
+    
+    svg
+      width 42.8125vw
+      height 21.875vw
+      
+    img
+      position absolute
+      top 0
+      left 50%
+      
+      width 20.9375vw
+      height 17.5vw
+      margin-left -10.46875vw
+      border none      
     
   .menu-item--hide
-    display block
+    display none
     
   .header__content
+    position relative
+    width 100%
     height 121.875vw
     
     background-color #e1eef7
+    background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-background@1x.jpg)
+    background-repeat no-repeat
+    background-size auto 121.875vw
+    background-position center
+    
+    .text-welcome
+      position absolute
+      top 14.6875vw
+      left 50%
+      
+      display block
+      width 45vw
+      height 10.9375vw
+      margin-left -22.5vw
+      
+    .text-gorgeus
+      position absolute
+      top 28.125vw
+      left 50%
+      
+      display block
+      width 61.25vw
+      height 7.1875vw
+      margin-left -30.625vw
+      
+    .text-sedona
+      position absolute
+      top 54.0625vw
+      left 50%
+      
+      display block
+      width 87.5vw
+      height 14.6875vw
+      margin-left -43.75vw
+      
+    .text-because
+      position absolute
+      top 90vw
+      left 50%
+      
+      display block
+      width 61.25vw
+      height 15vw
+      margin-left -30.625vw
+      
+      fill #fff
     
   .page__banner
     position relative
@@ -187,6 +285,22 @@ body
     
     text-align center
     fontVal(4.375vw, 8.125vw)
+    overflow hidden
+    
+    &:after
+      content ''
+      position absolute
+      bottom 0
+      left 0
+
+      display block
+      width 0
+      height 0
+
+      border-top 5vw solid transparent
+      border-left 49.3vw solid blueC
+      border-right 49.3vw solid blueC
+      border-bottom none
     
     .page__tagline
       margin-bottom 8.75vw
@@ -198,39 +312,8 @@ body
       
     .page__paragraph
       margin-bottom 12.8125vw
-      
-      &:before
-        content ''
-        position absolute
-        bottom 100%
-        left 0
-
-        display block
-        width 0
-        height 0
-
-        border-top 7.8125vw solid transparent
-        border-left 49.3vw solid #fff
-        border-right 49.3vw solid #fff
-        border-bottom none
-
-      &:after
-        content ''
-        position absolute
-        bottom 0
-        left 0
-
-        display block
-        width 0
-        height 0
-
-        border-top 5vw solid transparent
-        border-left 49.3vw solid blueC
-        border-right 49.3vw solid blueC
-        border-bottom none
-      
     
-  .reason__mean
+  .reason__mean--block
     position relative
     height 60.3125vw
     padding 13.4375vw 6.25vw 12.5vw
@@ -254,6 +337,18 @@ body
       
       background-color rgba(#000, 0.3)
     
+    &:first-child:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-city@1x.jpg")
+      background-repeat no-repeat
+      background-position center
+      background-size auto 100%
+      
+  .reason__mean--revers:after
+    background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-bridge@1x.jpg")
+    background-repeat no-repeat
+    background-position center
+    background-size auto 100%
+      
     .reason__tagline
       margin-bottom 4.0625vw
       
@@ -287,67 +382,66 @@ body
       .chip__content
         fontVal(4.375vw, 6.5625vw)
         
-    .chip--house:before
-      content ''
-      position absolute
-      top 0
-      left 0.625vw
+    .chip--house svg
+        position absolute
+        top 0
+        left 0.625vw
+        
+        width 11.5625vw
+        height 11.5625vw
+        fill blueC
       
-      display block
-      width 11.5625vw
-      height 11.5625vw
-      
-      background-color rgba(#000, 0.3)
-      
-    .chip--food:before
-      content ''
+    .chip--food svg
       position absolute
       top 0
       left 1.5625vw
       
-      display block
       width 10vw
       height 11.875vw
       
-      background-color rgba(#000, 0.3)
+      fill blueC
       
-    .chip--souvenir:before
-      content ''
+    .chip--souvenir svg
       position absolute
       top 0
       left 0
       
-      display block
       width 11.5625vw
       height 10.9375vw
       
-      background-color rgba(#000, 0.3)
+      fill blueC
       
   .reason__mean--inline
-    margin-bottom 0
+    position relative
+    height 60.3125vw
+    padding 13.4375vw 6.25vw 12.5vw
+    margin-bottom 0vw
     
+    fontVal(4.375vw, 6.5625vw)
+    text-align center
     color #000
     
     background-color grayC
     
-    &:last-of-type:after
-      display none
-    
     &:after
+      content ''
+      position absolute
       bottom 0.15vw
       left 6.25vw
       
+      display block
       width 86vw
       height 0.3125vw
       
       background-color darkgrayC
       z-index 3
       
+    &:last-of-type:after
+      display none
+      
   .search-form
     width 100%
     padding-bottom 15.3125vw
-    
-    box-shadow 0 0 5vw 0 rgba(#000, 0.8)
     
     .search-form__tagline
       margin-top 8.75vw
@@ -392,6 +486,7 @@ body
       box-sizing border-box
       
     input
+      position relative
       display block
       width 87.5%
       padding 4.375vw 11.875vw 4.375vw 4.8vw
@@ -411,9 +506,37 @@ body
       placeholder(font, sansB)
       placeholder(font-weight, bold)
       placeholder(color, #000)
+     
+    .box-in
+      position relative
+      
+      svg
+        position absolute
+        top 13vw
+        left 81.5vw
+
+        width 6.25vw
+        height 6.875vw
+
+        fill #a9a9a9
+        
+    .box-out
+        position relative
+
+        svg
+          position absolute
+          top 13vw
+          left 81.5vw
+
+          width 6.25vw
+          height 6.875vw
+
+          fill #a9a9a9
     
     .box-grown
+      position relative
       float left
+      
       width 35.625vw
       padding 0
       margin 0
@@ -424,10 +547,50 @@ body
         padding-left 3.125vw
         
       .search-form__grown
+        padding-right 11.875vw
+        padding-left 11.875vw
         margin 0
+        
+        text-align center
+        
+      .search-form__btn-grown--minus
+        position absolute
+        top 15vw
+        left 3.7vw
+        
+        display block
+        width 3.125vw
+        height 0.9375vw
+        
+        background-color transparent
+        border none
+        
+        svg
+          width 3.125vw
+          height 0.9375vw
+          fill #a9a9a9
+          
+      .search-form__btn-grown--plus
+        position absolute
+        top 15vw
+        right 10vw
+
+        display block
+        width 3.125vw
+        height 3.125vw
+
+        background-color transparent
+        border none
+
+        svg
+          width 3.125vw
+          height 3.125vw
+          fill #a9a9a9
       
     .box-children
+      position relative
       float right
+      
       width 35.625vw
       padding 0
       margin 0
@@ -437,8 +600,51 @@ body
         padding-left 3.125vw
         
       .search-form__children
+        padding-right 11.875vw
+        padding-left 11.875vw
         margin 0
-        margin-right 0
+        
+        text-align center
+        placeholder(text-align, center)
+        
+      .search-form__btn-children--minus
+        position absolute
+        top 15vw
+        left 3.7vw
+        
+        display block
+        width 3.125vw
+        height 0.9375vw
+        
+        background-color transparent
+        border none
+        
+        svg
+          width 3.125vw
+          height 0.9375vw
+          fill #a9a9a9
+          
+      .search-form__btn-children--plus
+          position absolute
+          top 15vw
+          right 10vw
+
+          display block
+          width 3.125vw
+          height 3.125vw
+
+          background-color transparent
+          border none
+
+          svg
+            width 3.125vw
+            height 3.125vw
+            fill #a9a9a9
+        
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button
+      -webkit-appearance: none; 
+      margin: 0; 
       
     .search-form__btn
       display block
@@ -467,6 +673,11 @@ body
       height 100%
       
       background-color rgba(#000, 0.4)
+      box-shadow inset 0vw 1vw 3vw -1vw #000
+      
+      iframe
+        width 100%
+        height 185.3125vw
       
     .main-footer__content
       position absolute
@@ -496,27 +707,66 @@ body
         margin-bottom 12.8125vw
         
       .social-btn__twitter
+        position relative
         display inline-block
         width 14.375vw
         height 15vw
         margin-right 1.875vw
         
-        background-color rgba(#000, 0.5)
+        background-color blueC
+        
+        svg 
+          position absolute
+          top 50%
+          left 50%
+          
+          width 5.3125vw
+          height 4.6875vw
+          margin-top -2.34375vw
+          margin-left -2.65625vw
+          
+          fill #fff
         
       .social-btn__facebook
+        position relative
         display inline-block
         width 14.375vw
         height 15vw
         margin-right 1.875vw
         
-        background-color rgba(#000, 0.5)
+        background-color blueC
+        
+        svg 
+          position absolute
+          top 50%
+          left 50%
+          
+          width 2.8125vw
+          height 5.9375vw
+          margin-top -2.96875vw
+          margin-left -1.40625vw
+          
+          fill #fff
         
       .social-btn__youtube 
+        position relative
         display inline-block
         width 14.375vw
         height 15vw
         
-        background-color rgba(#000, 0.5)
+        background-color blueC
+        
+        svg
+          position absolute
+          top 50%
+          left 50%
+          
+          width 6.25vw
+          height 4.375vw
+          margin-top -2.1875vw
+          margin-left -3.125vw
+          
+          fill #fff
         
       .copywrite
         display block
@@ -533,8 +783,13 @@ body
           height 10.3125vw
           
           vertical-align middle
-          background-color rgba(#000, 0.5)
           overflow hidden
+          
+          svg 
+            width 8.4375vw
+            height 10.3125vw
+            
+            fill #231f20
           
         .copywright__customer
           display inline-block
@@ -542,16 +797,37 @@ body
           height 10.3125vw
           
           vertical-align middle
-          background-color rgba(#000, 0.5)
           overflow hidden
+          
+          svg 
+            width 8.4375vw
+            height 10.3125vw
+            
+            fill #231f20
 
 
 
+  @media (min-resolution: 144dpi ), (min-resolution: 1.5dppx )
+    .header__content
+      background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-background@2x.jpg)
+      
+    .reason__mean--block:first-child:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-city@2x.jpg")
+      
+    .reason__mean--revers:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-bridge@2x.jpg")
+      
 @media screen and (min-width: 768px) and (max-width: 1199px)
+  body
+    width 100%
+    max-width 1200px
+    margin 0 auto
+    
   .main-header
     position relative
     width 100%
     height 73.958333vw
+    overflow hidden
     
     &:after
       content ''
@@ -569,6 +845,8 @@ body
       border-right 49.35vw solid #fff
       border-bottom none
       
+      z-index 3
+      
     &:before
       content ''
       position absolute
@@ -584,6 +862,8 @@ body
       border-left 28.9vw solid #fff
       border-right 28.9vw solid #fff
       border-bottom none
+      
+      z-index 3
   
   .main-nav
     position relative
@@ -610,7 +890,7 @@ body
   .main-nav__btn-cross
     display none
     
-  .menu-item    
+  .menu-item
     fontVal(1.8229vw, 1.5625vw)
     font-family sansB
     font-weight bold
@@ -620,7 +900,6 @@ body
     background-color #fff
     border none
     
-    
     &:nth-child(2)
       margin-right -4.5vw
       
@@ -628,23 +907,93 @@ body
       margin-left -4.5vw
       
   .logo
-    position relative
-    display inline-block
-    width 17.83854vw
-    height 9.11458vw
+    
+      position relative
+      
+      display block
+      width 17.8385vw
+      height 9.1146vw
 
-    margin-top -2.8646vw
+      padding 0
+      margin 0
+      margin-top  -2.8646vw
 
-    border none
-    background-color rgba(#000, 0.3)
+      background-color transparent
+      border none
+      z-index 3
+
+      svg
+        width 17.8385vw
+        height 9.1146vw
+
+      img
+        position absolute
+        top 0
+        left 50%
+
+        width 8.724vw
+        height 7.2917vw
+        margin-left -4.362vw
+        border none      
+
+        border none
     
   .menu-item--hide
     display inline-block
     
   .header__content
+    position relative
+    width 100%
     height 66.666vw
     
     background-color #e1eef7
+    background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-background@1x.jpg)
+    background-repeat no-repeat
+    background-size auto 66.666vw
+    background-position center
+    
+    .text-welcome
+        position absolute
+        top 9.8958vw
+        left 50%
+
+        display block
+        width 24.6094vw
+        height 5.8594vw
+        margin-left -12.305vw
+      
+    .text-gorgeus
+        position absolute
+        top 17.1875vw
+        left 50%
+
+        display block
+        width 34.505vw
+        height 3.90625vw
+        margin-left -17.2526vw
+      
+    .text-sedona
+        position absolute
+        top 27.8645vw
+        left 50%
+
+        display block
+        width 59.505vw
+        height 10.156vw
+        margin-left -29.7526vw
+      
+    .text-because
+        position absolute
+        top 45.3125vw
+        left 50%
+
+        display block
+        width 38.4115vw
+        height 10.417vw
+        margin-left -19.20573vw
+
+        fill #fff
+    
     
   .page__banner
     position relative
@@ -670,7 +1019,7 @@ body
       &:after
         display none
   
-  .reason__mean
+  .reason__mean--block
     position relative
     display block
     width 100%
@@ -685,7 +1034,7 @@ body
     
     background-color blueC
     
-    &:after
+    &:first-child:after
       content ''
       position absolute
       top 0
@@ -696,6 +1045,10 @@ body
       height 33.3333vw
       
       background-color rgba(#000, 0.3)
+      background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-city@1x.jpg)
+      background-repeat no-repeat
+      background-size 100% 100%
+      background-position center
     
     .reason__tagline
       margin-bottom 1.30208vw
@@ -709,10 +1062,23 @@ body
       margin-bottom 2.86458vw
       
   .reason__mean--revers
-    padding 5.859375vw 5.208vw 5.598958vw 71.847333%
-    
-    &:after
-      left 0
+      padding 5.859375vw 5.208vw 5.598958vw 71.847333%
+
+      &:after
+        content ''
+        position absolute
+        top 0
+        left  0
+
+        display block
+        width 66.666%
+        height 33.3333vw
+
+        background-color rgba(#000, 0.3)
+        background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-bridge@1x.jpg)
+        background-repeat no-repeat
+        background-size 100% 100%
+        background-position center
       
   .chips-section
     display flex
@@ -748,7 +1114,7 @@ body
       .chip__content
         fontVal(1.82291vw, 2.734375vw)
         
-    .chip--house:before
+    .chip--house svg
       content ''
       position absolute
       top 7.8125vw
@@ -759,9 +1125,9 @@ body
       height 9.375vw
       margin-left -4.8828vw
       
-      background-color rgba(#000, 0.3)
+      fill blueC
       
-    .chip--food:before
+    .chip--food svg
       content ''
       position absolute
       top 7.9427vw
@@ -772,9 +1138,9 @@ body
       height 9.11458333vw
       margin-left -4.817708vw
       
-      background-color rgba(#000, 0.3)
+      fill blueC
       
-    .chip--souvenir:before
+    .chip--souvenir svg
       content ''
       position absolute
       top 7.29166vw
@@ -785,7 +1151,7 @@ body
       height 9.8958333vw
       margin-left -4.16666vw
       
-      background-color rgba(#000, 0.3)
+      fill blueC
       
   .reason__mean--inline-box
     display flex
@@ -805,27 +1171,40 @@ body
     vertical-align top
     color textC
     hyphens auto
+    fontVal(1.82291666vw, 2.734375vw)
+    text-align center
     
     background-color grayC
     
-    
-    .reason__tagline
+   .reason__tagline
       padding 0 3.2552vw
+      margin-bottom 1.30208vw
+
+      font-family sansB
+      font-weight bold
       color #000
+      fontVal(2.734375vw, 3.38541666vw)
+
+  .reason__number
+      display block
+      margin-bottom 2.86458vw
     
-    &:after
+    .reason__tagline:after
       display none
       
   .search-form
     position relative
     width 73.95833%
     margin 0 auto
+    text-align center
     
     .search-form__form
       position absolute
       top 19.14vw
       
-      box-shadow 0 0 20px -5px #000
+      width 100%
+      
+      box-shadow 0 1vw 2vw -1vw rgba(#000, 0.5)
       background-color #fff
       z-index 3
     
@@ -862,24 +1241,23 @@ body
       
     label
       display inline-block
-      width 14.58333vw
-      padding 0
+      width 24%
+      padding 2.4vw 0
       margin 0
-      margin-left 7.161458vw
       
       font-family sansB
       fontVal(1.82292vw, 1.30208vw)
       font-weight bold
       color #000
+      text-align left
       
       box-sizing border-box
       
     input
       display inline-block
-      width 60.915%
+      width 75.71%
       padding 1.82291666vw 4.94791666vw 1.82291666vw 1.953125vw
       margin 0
-      margin-bottom 3.90625vw
       
       font-family sansB
       fontVal(1.82292vw, 1.30208vw)
@@ -894,67 +1272,195 @@ body
       placeholder(font, sansB)
       placeholder(font-weight, bold)
       placeholder(color, #000)
+      
+    .box-in
+      position relative
+      clear both
+      
+      width 80.4577%
+      height 4.95vw
+      padding 0
+      margin 0 auto
+      margin-bottom 3.90625vw
+      
+      label
+        float left
+        
+      input
+        float right
+      
+      svg
+        position absolute
+        top 1.3vw
+        left 93.87%
+
+        width 2.6042vw
+        height 2.8646vw
+
+        fill #a9a9a9
+        
+    .box-out
+      position relative
+      clear both
+      
+      width 80.4577%
+      height 4.95vw
+      padding 0
+      margin 0 auto
+      margin-bottom 3.90625vw
+      
+      label
+        float left
+        
+      input
+        float right
+      
+      svg
+        position absolute
+        top 1.3vw
+        left 93.87%
+
+        width 2.6042vw
+        height 2.8646vw
+
+        fill #a9a9a9
     
     .box-grown
-      display inline-block
-      width 29.427vw
-      height 6vw
-      
-      padding 0
-      margin 0
-      margin-left 7.161458vw
-      
-      box-sizing border-box
+      position relative
+      float left
       clear both
       
-      .search-form__label-grown
+      display block
+      width 29.3vw
+      padding 0
+      margin 0
+      margin-left 7.29vw
+      
+      label
         float left
-        display ininline-block
-        width 0vw
-        padding 0
-        padding 2.5vw 0
-        margin 0
-        
+        display inline-block
+        width 12vw
+        padding-top 2.5vw
+      
       .search-form__grown
         float right
-        display ininline-block
-        width 14.84375vw
-        margin 0
+        position relative
+        display inline-block
+        width 15.8vw
+        box-sizing border-box
+        
+        padding-right 4.95vw
+        padding-left 4.95vw
+        
+        text-align center
+        
+      .search-form__btn-grown--minus
+        position absolute
+        top 1.5vw
+        right 13.5vw
+        
+        display block
+        width 1.3vw
+        height 0.39vw
+        
+        background-color transparent
+        border none
+        
+        svg
+          width 1.3vw
+          height 0.39vw
+          fill #a9a9a9
+          
+      .search-form__btn-grown--plus
+        position absolute
+        top 2vw
+        right 2.3vw
+
+        display block
+        width 1.3vw
+        height 1.3vw
+
+        background-color transparent
+        border none
+
+        svg
+          width 1.3vw
+          height 1.3vw
+          fill #a9a9a9
       
     .box-children
-      display inline-block
-      width 23.4375vw
-      height 6vw
+      position relative
+      float right
+      clear both
       
+      width 23.44vw
       padding 0
       margin 0
-      margin-left 5.5vw
-      
-      box-sizing border-box
-      clear both
+      margin-right 7.29vw
+      margin-top -6vw
+      margin-bottom 7.03125vw
       
       .search-form__label-children
         float left
-        display ininline-block
-        width 5.208vw
-        padding 0
-        padding 2.5vw 0
-        margin 0
+        display inline-block
+        width 7.3vw
+        padding-top 2.5vw
         
       .search-form__children
         float right
-        display ininline-block
-        width 14.84375vw
+        position relative
+        display inline-block
+        width 15.8vw
+        box-sizing border-box
+        
+        padding-right 4.95vw
+        padding-left 4.95vw
         margin 0
+        
+        text-align center
+        
+      .search-form__btn-children--minus
+        position absolute
+        top 1.5vw
+        right 13.5vw
+        
+        display block
+        width 1.3vw
+        height 0.39vw
+        
+        background-color transparent
+        border none
+        
+        svg
+          width 1.3vw
+          height 0.39vw
+          fill #a9a9a9
+          
+      .search-form__btn-children--plus
+        position absolute
+        top 2vw
+        right 2.3vw
+
+        display block
+        width 1.3vw
+        height 1.3vw
+
+        background-color transparent
+        border none
+
+        svg
+          width 1.3vw
+          height 1.3vw
+          fill #a9a9a9
+        
       
     .search-form__btn
       display block
-      width 59.6354vw
+      width 80.4577%
       
       padding 2.734375vw 0
       margin 0 auto
       margin-bottom 7.1615vw
-      margin-top 7.03125vw
       
       font-family sansB
       fontVal(2.734375vw, 1.953125vw)
@@ -971,10 +1477,14 @@ body
     height 77.21354vw
     
     .main-footer__map
-      width 100%
-      height 100%
-      
-      background-color rgba(#000, 0.4)
+        width 100%
+        height 100%
+
+        background-color rgba(#000, 0.4)
+
+        iframe
+          width 100%
+          height 77.21354vw
       
     .main-footer__content
       position absolute
@@ -1000,31 +1510,70 @@ body
         color #000
         
       .social-btn
-        width 19.66145vw
-        height 6.25vw
+          width 19.66145vw
+          height 6.25vw
         
       .social-btn__twitter
-        display inline-block
-        width 5.98958vw
-        height 6.25vw
-        margin-right 0.78125vw
-        
-        background-color rgba(#000, 0.5)
+          position relative
+          display inline-block
+          width 5.98958vw
+          height 6.25vw
+          margin-right 0.78125vw
+
+          background-color blueC
+          
+          svg 
+            position absolute
+            top 50%
+            left 50%
+
+            width 2.2135vw
+            height 1.8229vw
+            margin-top -0.91146vw
+            margin-left -1.1068vw
+
+            fill #fff
         
       .social-btn__facebook
+          position relative
+          display inline-block
+          width 5.98958vw
+          height 6.25vw
+          margin-right 0.78125vw
+
+          background-color blueC
+
+          svg 
+            position absolute
+            top 50%
+            left 50%
+
+            width 1.1719vw
+            height 2.474vw
+            margin-top -1.237vw
+            margin-left -0.5859vw
+
+            fill #fff
+        
+      .social-btn__youtube
+        position relative
         display inline-block
         width 5.98958vw
         height 6.25vw
-        margin-right 0.78125vw
         
-        background-color rgba(#000, 0.5)
+        background-color blueC
         
-      .social-btn__youtube 
-        display inline-block
-        width 5.98958vw
-        height 6.25vw
-        
-        background-color rgba(#000, 0.5)
+        svg 
+          position absolute
+          top 50%
+          left 50%
+          
+          width 2.604vw
+          height 1.8229vw
+          margin-top -0.91145vw
+          margin-left -1.302vw
+          
+          fill #fff
         
       .copywrite
         display block
@@ -1041,8 +1590,13 @@ body
           height 3.90625vw
           
           vertical-align middle
-          background-color rgba(#000, 0.5)
           overflow hidden
+          
+          svg 
+            width 3.3854vw
+            height 3.90625vw
+            
+            fill #231f20
           
         .copywright__customer
           display inline-block
@@ -1050,34 +1604,51 @@ body
           height 4.296875vw
           
           vertical-align middle
-          background-color rgba(#000, 0.5)
           overflow hidden
+          
+          svg 
+            width 3.515625vw
+            height 4.296875vw
+            
+            fill #231f20
+          
 
-
+  @media (min-resolution: 144dpi ), (min-resolution: 1.5dppx )
+    .header__content
+      background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-background@2x.jpg)
+      
+    .reason__mean--block:first-child:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-city@2x.jpg")
+      
+    .reason__mean--revers:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-bridge@2x.jpg")
 @media screen and (min-width: 1200px)
   body
     width 100%
     max-width 1200px
     margin 0 auto
-  
+    
   .main-header
     position relative
     width 100%
-    height 73.958333vw
+    height 887.5px
+    
+    overflow hidden
     
     &:after
       content ''
       position absolute
       bottom 0
+      left 50%
       
       display block
       width 0
       height 0
-      margin 0 auto
+      margin-left -600px
       
-      border-top 4.6875vw solid transparent
-      border-left 49vw solid #fff
-      border-right 49vw solid #fff
+      border-top 56px solid transparent
+      border-left 600px solid #fff
+      border-right 600px solid #fff
       border-bottom none
       
     &:before
@@ -1089,11 +1660,11 @@ body
       display block
       width 0
       height 0
-      margin-left -28.9vw
+      margin-left -346px
       
-      border-top 4.6875vw solid transparent
-      border-left 28.9vw solid #fff
-      border-right 28.9vw solid #fff
+      border-top 56px solid transparent
+      border-left 346px solid #fff
+      border-right 346px solid #fff
       border-bottom none
   
   .main-nav
@@ -1101,8 +1672,8 @@ body
     
     display block
     width 100%
-    height 7.291666vw
-    padding 2.8646vw 4.03645%
+    height 87.4999px
+    padding 34.4px 4.03645%
     
     box-sizing border-box
     
@@ -1122,7 +1693,7 @@ body
     display none
     
   .menu-item    
-    fontVal(1.8229vw, 1.5625vw)
+    fontVal(21.9px, 18.8px)
     font-family sansB
     font-weight bold
     color #000
@@ -1133,18 +1704,18 @@ body
     
     
     &:nth-child(2)
-      margin-right -4.5vw
+      margin-right -54px
       
     &:nth-child(4)
-      margin-left -4.5vw
+      margin-left -54px
       
   .logo
     position relative
     display inline-block
-    width 17.83854vw
-    height 9.11458vw
+    width 214px
+    height 109.4px
 
-    margin-top -2.8646vw
+    margin-top -34.4px
 
     border none
     background-color rgba(#000, 0.3)
@@ -1153,27 +1724,27 @@ body
     display inline-block
     
   .header__content
-    height 66.666vw
+    height 800px
     
     background-color #e1eef7
     
   .page__banner
     position relative
-    padding 7.421875vw 16.1458333vw 0
+    padding 89.1px 194px 0
     
     text-align center
-    fontVal(1.82291666vw, 3.38541666vw)
+    fontVal(21.9px, 40.6px)
     
     .page__tagline
-      margin-bottom 3.6458333vw
+      margin-bottom 43.7px
       
       font-family sansB
       font-weight bold
-      fontVal(2.734375vw, 3.38541666vw)
+      fontVal(32.8px, 40.6px)
       color #000
       
     .page__paragraph
-      margin-bottom 6.380208333vw
+      margin-bottom 76.6px
       
       &:before
         display none
@@ -1185,12 +1756,12 @@ body
     position relative
     display block
     width 100%
-    height 33.3333vw
+    height 400px
     
-    padding 5.859375vw 71.847333% 5.598958vw 5.208vw
+    padding 70.3px 71.847333% 67.2px 62.5px
     margin 0
     
-    fontVal(1.82291666vw, 2.734375vw)
+    fontVal(21.9px, 32.8px)
     color #fff
     text-align center
     
@@ -1204,7 +1775,7 @@ body
       
       display block
       width 66.666%
-      height 33.3333vw
+      height 400px
       
       background-color rgba(#000, 0.3)
     
@@ -1220,26 +1791,28 @@ body
       margin-bottom 2.86458vw
       
   .reason__mean--revers
-    padding 5.859375vw 5.208vw 5.598958vw 71.847333%
+    padding 70.3px 62.5px 67.2px 71.847333%
     
     &:after
       left 0
       
   .chips-section
+    display flex
+    flex-direction row
+    justify-content space-around
+    
     width 100%
-    height 42.96875vw
-    padding 0 5.208333vw
+    height 515.6px
     
     .chip
       position relative
       
       display inline-block
-      width 23.4375vw
-      height 42.96875vw
+      width 281.3px
+      height 515.6px
       
-      padding-top 20.8333vw
+      padding-top 250px
       margin 0
-      margin-right 7.6vw
       
       text-align center
       
@@ -1248,51 +1821,51 @@ body
       
       .chip__headline
         margin 0
-        margin-bottom 2.734375vw
+        margin-bottom 32.8px
         
         font sansB
-        fontVal(2.734375vw, 3.38541666vw)
+        fontVal(32.8px, 40.6px)
         color #000
         
       .chip__content
-        fontVal(1.82291vw, 2.734375vw)
+        fontVal(21.9px, 32.8px)
         
     .chip--house:before
       content ''
       position absolute
-      top 7.8125vw
+      top 93.8px
       left 50%
       
       display block
-      width 9.7656vw
-      height 9.375vw
-      margin-left -4.8828vw
+      width 117.2px
+      height 112.5px
+      margin-left -58.6px
       
       background-color rgba(#000, 0.3)
       
     .chip--food:before
       content ''
       position absolute
-      top 7.9427vw
+      top 95.3px
       left 50%
       
       display block
-      width 9.6354vw
-      height 9.11458333vw
-      margin-left -4.817708vw
+      width 115.6px
+      height 109.4px
+      margin-left -57.8px
       
       background-color rgba(#000, 0.3)
       
     .chip--souvenir:before
       content ''
       position absolute
-      top 7.29166vw
+      top 87.5px
       left 50%
       
       display block
-      width 8.3333vw
-      height 9.8958333vw
-      margin-left -4.16666vw
+      width 100px
+      height 118.7px
+      margin-left -50px
       
       background-color rgba(#000, 0.3)
       
@@ -1305,10 +1878,10 @@ body
     
   .reason__mean--inline
     display inline-block
-    width 23.4375vw
-    height 33.333vw
+    width 281.3
+    height 400px
     
-    padding 5.8594vw 0 0 0
+    padding 70.3px 33px 0 33px
     margin 0
     
     vertical-align top
@@ -1319,7 +1892,7 @@ body
     
     
     .reason__tagline
-      padding 0 3.2552vw
+      padding 0 39.1px
       color #000
     
     &:after
@@ -1332,37 +1905,37 @@ body
     
     .search-form__form
       position absolute
-      top 19.14vw
+      top 229.7px
       
-      box-shadow 0 0 20px -5px #000
+      box-shadow 0 12px 24px -12px rgba(#000, 0.5)
       background-color #fff
       z-index 3
     
     .search-form__tagline
-      margin-top 7.55208vw
-      margin-bottom 5.9375vw
+      margin-top 90.6px
+      margin-bottom 71.25px
       
       font-family sansB
-      fontVal(3.90625vw, 2.734375vw)
+      fontVal(46.9px, 32.8px)
       color #000
       font-weight bold
       text-align center
       
     .search-form__content
-      padding 0 7.8125vw
-      margin-bottom 15.5vw
+      padding 0 93.75px
+      margin-bottom 186px
       
       text-align center
-      fontVal(1.82292vw, 3.125vw)
+      fontVal(21.9px, 37.5px)
       
     .search-form__legend
       display block
       width 100%
-      padding 4.42708vw 0
-      margin-bottom 7.5vw
+      padding 53.1px 0
+      margin-bottom 90px
       
       font-family sansB
-      fontVal(2.734375vw, 2.34375vw)
+      fontVal(32.8px, 28.1px)
       text-align center
       color #fff
       font-weight bold
@@ -1371,13 +1944,13 @@ body
       
     label
       display inline-block
-      width 14.58333vw
+      width 175px
       padding 0
       margin 0
-      margin-left 7.161458vw
+      margin-left 85.9px
       
       font-family sansB
-      fontVal(1.82292vw, 1.30208vw)
+      fontVal(21.9px, 15.6px)
       font-weight bold
       color #000
       
@@ -1386,12 +1959,12 @@ body
     input
       display inline-block
       width 60.915%
-      padding 1.82291666vw 4.94791666vw 1.82291666vw 1.953125vw
+      padding 21.9px 59.4px 21.9px 23.4px
       margin 0
-      margin-bottom 3.90625vw
+      margin-bottom 46.9px
       
       font-family sansB
-      fontVal(1.82292vw, 1.30208vw)
+      fontVal(21.9px, 15.6px)
       text-transform uppercase
       font-weight bold
       
@@ -1406,12 +1979,12 @@ body
     
     .box-grown
       display inline-block
-      width 29.427vw
-      height 6vw
+      width 353.1px
+      height 72px
       
       padding 0
       margin 0
-      margin-left 7.161458vw
+      margin-left 85.9px
       
       box-sizing border-box
       clear both
@@ -1419,25 +1992,25 @@ body
       .search-form__label-grown
         float left
         display ininline-block
-        width 0vw
+        width 0
         padding 0
-        padding 2.5vw 0
+        padding 30px 0
         margin 0
         
       .search-form__grown
         float right
         display ininline-block
-        width 14.84375vw
+        width 178.1px
         margin 0
       
     .box-children
       display inline-block
-      width 23.4375vw
-      height 6vw
+      width 281.3px
+      height 72px
       
       padding 0
       margin 0
-      margin-left 5.5vw
+      margin-left 66px
       
       box-sizing border-box
       clear both
@@ -1445,28 +2018,28 @@ body
       .search-form__label-children
         float left
         display ininline-block
-        width 5.208vw
+        width 62.5px
         padding 0
-        padding 2.5vw 0
+        padding 30px 0
         margin 0
         
       .search-form__children
         float right
         display ininline-block
-        width 14.84375vw
+        width 178.1px
         margin 0
       
     .search-form__btn
       display block
-      width 59.6354vw
+      width 715.6px
       
-      padding 2.734375vw 0
+      padding 32.8px 0
       margin 0 auto
-      margin-bottom 7.1615vw
-      margin-top 7.03125vw
+      margin-bottom 85.9px
+      margin-top 84.4px
       
       font-family sansB
-      fontVal(2.734375vw, 1.953125vw)
+      fontVal(32.8px, 23.4px)
       text-align center
       color #fff
       font-weight bold
@@ -1477,7 +2050,7 @@ body
   .main-footer
     position relative
     width 100%
-    height 77.21354vw
+    height 926.6px
     
     .main-footer__map
       width 100%
@@ -1495,8 +2068,8 @@ body
       align-items center
       
       width 100%
-      height 15.625vw
-      padding 4.6875vw 5.208vw 4.6875vw 7.8125vw
+      height 187.5px
+      padding 56.3px 62.5px 56.3px 93.8px
       box-sizing border-box
       
       text-align center
@@ -1505,49 +2078,49 @@ body
       .main-footer__tag
         font-family sansB
         font-weight bold
-        fontVal(2.734375vw, 1.9531vw)
+        fontVal(32.8px, 23.4px)
         color #000
         
       .social-btn
-        width 19.66145vw
-        height 6.25vw
+        width 235.9px
+        height 75px
         
       .social-btn__twitter
         display inline-block
-        width 5.98958vw
-        height 6.25vw
-        margin-right 0.78125vw
+        width 72px
+        height 75px
+        margin-right 9.4px
         
         background-color rgba(#000, 0.5)
         
       .social-btn__facebook
         display inline-block
-        width 5.98958vw
-        height 6.25vw
-        margin-right 0.78125vw
+        width 72px
+        height 75px
+        margin-right 9.4px
         
         background-color rgba(#000, 0.5)
         
       .social-btn__youtube 
         display inline-block
-        width 5.98958vw
-        height 6.25vw
+        width 72px
+        height 75px
         
         background-color rgba(#000, 0.5)
         
       .copywrite
         display block
-        width 24.73958vw
-        height 4.296875vw
+        width 296.9px
+        height 51.6px
         
         vertical-align middle
         font-family sansN
-        fontVal(1.8229vw, 1.30208vw)
+        fontVal(21.9px, 15.6px)
         
         .copywright__creator
           display inline-block
-          width 3.3854vw
-          height 3.90625vw
+          width 40.6px
+          height 46.9px
           
           vertical-align middle
           background-color rgba(#000, 0.5)
@@ -1555,12 +2128,22 @@ body
           
         .copywright__customer
           display inline-block
-          width 3.515625vw
-          height 4.296875vw
+          width 42.2px
+          height 51.6px
           
           vertical-align middle
           background-color rgba(#000, 0.5)
           overflow hidden
+  @media (min-resolution: 144dpi ), (min-resolution: 1.5dppx )
+    .header__content
+      background-image url(file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-background@2x.jpg)
+      
+    .reason__mean--block:first-child:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-city@2x.jpg")
+      
+    .reason__mean--revers:after
+      background-image url("file:///D:/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Sedona/dist/images/photo-bridge@2x.jpg")
+
 
 
 
