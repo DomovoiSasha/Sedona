@@ -1,0 +1,17 @@
+mixin chips()
+	+b.chips&attributes(attributes)
+		div.chips__chip.chip-house
+			svg.chip-house__svg
+				use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_house').chip-house__icon
+			h5.chip-house__headline Жилье
+			p.chip-house__content Рекомендуем пожить в настоящем мотеле, все как в кино!
+		div.chips__chip.chip-food
+			svg.chip-food__svg
+				use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_food').chip-food__icon
+			h5.chip-food__headline Еда
+			p.chip-food__content Всегда заказывай фирменный бургер, вы не разочаруетесь!
+		div.chips__chip.chip-souvenir
+			svg.chip-souvenir__svg
+				use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_gift').chip-souvenir__icon
+			h5.chip-souvenir__headline Сувениры
+			p.chip-souvenir__content Не только китайского, но и местного производства!

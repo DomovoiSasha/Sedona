@@ -1,0 +1,35 @@
+mixin search-form()
+	+b('section').search-form&attributes(attributes)
+		h3.search-form__tagline Заинтересовались?
+		p.search-form__content Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне
+		form(method="POST").search-form__form
+			legend.search-form__legend Поиск гостиницы в Седоне
+			div.box-entry
+				label(for="date-entry").label-entry Дата заезда:
+				input(type="text", id="date-entry", placeholder="24 сентября 2016").date-entry
+				svg.date-entry__svg-calendar
+					use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_calendar').icon_calendar
+			div.box-exit
+				label(for="date-exit").label-exit Дата выезда:
+				input(type="text", id="date-exit", placeholder="24 сентября 2016").date-exit
+				svg.date-exit__svg-calendar
+					use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_calendar').icon_calendar
+			div.box-grown
+				label(for="grown").label-grown Взрослые:
+				input(type="number", id="grown", value="2").amount-grown
+				button.grown-btn-minus
+					svg.grown-btn-minus__svg-minus
+						use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_minus').icon_minus
+				button.grown-btn-plus
+					svg.grown-btn-plus__svg-plus
+						use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_plus').icon_plus
+			div.box-children
+				label(for="children").label-children Дети:
+				input(type="number", id="children", value="0").amount-children
+				button.children-btn-minus
+					svg.children-btn-minus__svg-minus
+						use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_minus').icon_minus
+				button.children-btn-plus
+					svg.children-btn-plus__svg-plus
+						use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_plus').icon_plus
+			button.btn-search Найти

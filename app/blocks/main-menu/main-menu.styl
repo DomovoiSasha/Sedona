@@ -1,0 +1,274 @@
++below(768px)
+	.main-menu
+		position relative
+		size(100%, 17.5vw)
+		margin-top 0vw
+		
+		&__btn-burger
+			position absolute
+			top 5.3125vw
+			right 6.25vw
+
+			display block
+			size(7.1875vw, 6.875vw)
+			
+		&__btn-cross
+			position absolute
+			bottom 74vw
+			right 6.25vw
+
+			display block
+			width 6.875vw
+			height 6.875vw
+
+			z-index 3
+			
+		&__item
+			position absolute
+			bottom 100%
+			
+			display block
+			width 100vw
+			padding 2.1875vw 0
+
+			fontVal(5.625vw, 12.5vw)
+			font-family sansB
+			font-weight bold
+			color #fff
+			text-align center
+
+			background-color blueColor
+			border-bottom 0.3125vw solid rgba(#000, 0.5)
+			border-top 0.3125vw solid rgba(#fff, 0.5)
+
+			&:first-child
+				bottom 68.95vw
+				border-top none
+
+			&:nth-child(2)
+				bottom 51.8vw
+
+			&:nth-child(4)
+				bottom 34.6875vw
+
+			&:last-child
+				border-bottom none
+
+			&:hover
+				background-color #669ec0
+				cursor pointer
+
+			&:active
+				background-color #5496bd
+				color #88b6d1
+				cursor pointer
+				
+		&__logo
+			position relative
+			display block
+			width 42.8125vw
+			height 21.875vw
+
+			padding 0
+			margin 0 auto
+
+			background-color transparent
+			border none
+			z-index 5
+
+			&:hover
+				background-color transparent
+
+			&:active
+				background-color transparent
+				
+	.btn-burger__svg
+			size(7.1875vw, 6.875vw)
+			fill blueColor
+		
+	.btn-cross__svg
+		size(100%)
+		fill #fff
+		
+	.logo__svg
+		size(42.8125vw, 21.875vw)
+		fill blueColor
+
+	.logo__img
+		position absolute
+		top 0
+		left 50%
+
+		width 20.9375vw
+		height 17.5vw
+		margin-left -10.46875vw
+		border none
+	
+
++between(768px, 1199px)
+	.main-menu
+		position relative
+
+		display block
+		size(100%, 7.291666vw)
+		padding 2.8646vw 4.03645%
+		
+		&:before
+			display none
+		
+		&__list
+			display flex
+			flex-direction row
+			justify-content space-between
+			align-items flex-start
+		
+		&__btn-burger
+			display none
+		
+		&__btn-cross
+			display none
+		
+		&__item
+			fontVal(1.8229vw, 1.5625vw)
+			font-family sansB
+			font-weight bold
+			color #000
+			text-align center
+
+			background-color #fff
+			border none
+
+			&:nth-child(2)
+				margin-right -4.5vw
+
+			&:nth-child(4)
+				margin-left -4.5vw
+
+			&:hover
+				color blueColor
+				cursor pointer
+
+			&:active
+				color #000
+				cursor pointer
+				opacity 0.3
+				
+		&__logo
+			position relative
+			size(17.8385vw, 9.1146vw)
+
+			padding 0
+			margin 0
+			margin-top  -2.8646vw
+
+			background-color transparent
+			border none
+			z-index 3
+
+			&:hover
+				background-color transparent
+
+			&:active
+				background-color transparent
+
+	.logo__svg
+		size(100%)
+		fill blueColor
+		
+	.logo__icon
+		fill blueColor
+
+	.logo__img
+		position absolute
+		top 0
+		left 50%
+
+		size(8.724vw, 7.2917vw)
+		margin-left -4.362vw
+		border none      
+
+		border none
+	
++above(1199px)
+	.main-menu
+		position relative
+
+		display block
+		size(100%, 87.4999px)
+		padding 34.4px 4.03645%
+		
+		&:before
+			display none
+		
+		&__list
+			display flex
+			flex-direction row
+			justify-content space-between
+			align-items flex-start
+		
+		&__btn-burger
+			display none
+		
+		&__btn-cross
+			display none
+		
+		&__item
+			display inline-block
+			fontVal(21.9px, 18.8px)
+			font-family sansB
+			font-weight bold
+			color #000
+			text-align center
+
+			background-color #fff
+			border none
+
+			&:nth-child(2)
+				margin-right -54px
+
+			&:nth-child(4)
+				margin-left -54px
+
+			&:hover
+				color blueColor
+				cursor pointer
+
+			&:active
+				color #000
+				cursor pointer
+				opacity 0.3
+				
+		&__logo
+			position relative
+			display inline-block
+			size(214px, 109.4px)
+
+			padding 0
+			margin 0
+			margin-top  -34.4px
+
+			background-color transparent
+			border none
+			z-index 3
+
+			&:hover
+				background-color transparent
+
+			&:active
+				background-color transparent
+
+	.logo__svg
+		size(100%)
+		fill blueColor
+		
+	.logo__icon
+		fill blueColor
+
+	.logo__img
+		position absolute
+		top 0
+		left 50%
+
+		size(104.7px, 87.5px)
+		margin-left -52.35px
+		border none 

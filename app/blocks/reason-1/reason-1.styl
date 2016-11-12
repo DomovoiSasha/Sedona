@@ -1,0 +1,132 @@
++below(768px)
+	.reason-1
+		position relative
+		height 60.3125vw
+		padding 13.4375vw 6.25vw 12.5vw
+		margin-bottom 80vw
+
+		fontVal(4.375vw, 6.5625vw)
+		color #fff
+		text-align center
+
+		background-color blueColor
+		box-shadow 0 -1px 0 0 blueColor
+		
+		&:after
+			content ''
+			position absolute
+			top 100%
+			left 0
+
+			display block
+			width 100%
+			height 80vw
+
+			background-color rgba(#000, 0.3)
+			background-image url("../images/photo-city@1x.jpg")
+			background-repeat no-repeat
+			background-position center
+			background-size auto 100%
+			
+		&__tagline
+			margin-bottom 4.0625vw
+
+		font-family sansB
+		font-weight bold
+		fontVal(6.5625vw, 6.5625vw)
+		
+	&__number
+		display block
+		margin-bottom 4.0625vw
+		
++between(768px, 1199px)
+	.reason-1
+		position relative
+		display block
+		width 100%
+		height 33.3333vw
+
+		padding 5.859375vw 71.847333% 5.598958vw 5.208vw
+		margin 0
+
+		fontVal(1.82291666vw, 2.734375vw)
+		color #fff
+		text-align center
+
+		background-color blueColor
+
+		&:after
+			content ''
+			position absolute
+			top 0
+			right 0
+
+			display block
+			width 66.666%
+			height 33.3333vw
+
+			background-color rgba(#000, 0.3)
+			background-image url("../images/photo-city@1x.jpg")
+			background-repeat no-repeat
+			background-size 100% 100%
+			background-position center
+			
+			+retina()
+				background-image url("../images/photo-city@2x.jpg")
+				
+		&__tagline
+			margin-bottom 1.30208vw
+
+			font-family sansB
+			font-weight bold
+			fontVal(2.734375vw, 3.38541666vw)
+			color #fff
+			
+		&__number
+			display block
+			margin-bottom 2.86458vw
++above(1199px)
+	.reason-1
+		position relative
+		display block
+		width 100%
+		height 400px
+
+		padding 70.3px 71.847333% 67.2px 62.5px
+		margin 0
+
+		fontVal(21.9px, 32.8px)
+		color #fff
+		text-align center
+
+		background-color blueColor
+		
+		&:after
+			content ''
+			position absolute
+			top 0
+			right 0
+
+			display block
+			width 66.666%
+			height 400px
+
+			background-color rgba(#000, 0.3)
+			background-image url("../images/photo-city@1x.jpg")
+			background-repeat no-repeat
+			background-size 100% 100%
+			background-position center
+			
+			+retina()
+				background-image url("../images/photo-city@2x.jpg")
+				
+		&__tagline
+			margin-bottom 15.6px
+
+			font-family sansB
+			font-weight bold
+			fontVal(32.8px, 40.6px)
+			
+		&__number
+			display block
+			margin-bottom 34.4px

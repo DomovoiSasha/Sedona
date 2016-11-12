@@ -1,0 +1,164 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+
+import('../blocks/**/*')
+
+body
+	width 100%
+	min-width 320px
+	margin 0 auto
+
+	font-family sansN
+	fontVal()
+	color textColor
+
+	background-color #fff
+	
+button,
+button:active,
+button:hover,
+button:visited
+	outline none
+	
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none; 
+	margin: 0; 
+
++below(768px)
+	.body
+		width 100%
+		min-width 320px
+		
+	.main-header
+		position relative
+		width 100%
+		height 139.375vw
+		
+		overflow hidden
+
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+
+			display block
+			size(0)
+			margin-left -400px
+
+			border-top 7.8125vw solid transparent
+			border-left 400px solid #fff
+			border-right 400px solid #fff
+			border-bottom none
+
++between(768px, 1199px)
+	body
+		width 100%
+		max-width 1200px
+		margin 0 auto
+		
+	.main-header
+		position relative
+		width 100%
+		height 73.958333vw
+		overflow hidden
+
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+
+			display block
+			width 0
+			height 0
+			margin-left -50vw
+
+			border-top 4.6875vw solid transparent
+			border-left 50vw solid #fff
+			border-right 50vw solid #fff
+			border-bottom none
+
+			z-index 3
+
+		&:before
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+
+			display block
+			width 0
+			height 0
+			margin-left -28.9vw
+
+			border-top 4.6875vw solid transparent
+			border-left 28.9vw solid #fff
+			border-right 28.9vw solid #fff
+			border-bottom none
+
+			z-index 3
+			
+	.reasons__inline-box
+		display flex
+		flex-direction row
+		justify-content space-around
+
+		background-color grayColor
+	
++above(1199px)
+	body
+		width 100%
+		max-width 1200px
+		margin 0 auto
+	
+	.main-header
+		position relative
+		width 100%
+		height 887.5px
+
+		overflow hidden
+
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+
+			display block
+			width 0
+			height 0
+			margin-left -600px
+
+			border-top 56px solid transparent
+			border-left 605px solid #fff
+			border-right 605px solid #fff
+			border-bottom 2px solid #fff
+
+		&:before
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+
+			display block
+			width 0
+			height 0
+			margin-left -346px
+
+			border-top 56px solid transparent
+			border-left 346px solid #fff
+			border-right 346px solid #fff
+			border-bottom none
+			
+	.reasons__inline-box
+		display flex
+		flex-direction row
+		justify-content space-around
+
+		background-color grayColor

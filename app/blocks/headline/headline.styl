@@ -1,0 +1,84 @@
++below(768px)
+	.headline
+		position relative
+		height 74.375vw
+		padding 12.5vw 6.25vw 0
+
+		text-align center
+		fontVal(4.375vw, 8.125vw)
+		overflow hidden
+		box-shadow 0 -1px 0 0 #fff
+
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+
+			display block
+			size(0)
+			margin-left -400px
+
+			border-top 5vw solid transparent
+			border-left 400px solid blueColor
+			border-right 400px solid blueColor
+			border-bottom none
+			
+		&__tagline
+			margin-bottom 8.75vw
+
+			font-family sansB
+			font-weight bold
+			fontVal(5.625vw, 8.125vw)
+			color #000
+			
+		&__paragraph
+			margin-bottom 12.8125vw
+			
++between(768px, 1199px)
+	.headline
+		position relative
+		padding 7.421875vw 16.1458333vw 0
+
+		text-align center
+		fontVal(1.82291666vw, 3.38541666vw)
+		overflow hidden
+		box-shadow 0 -1px 0 0 #fff
+		
+		&:after
+			display none
+			
+		&__tagline
+			margin-bottom 3.6458333vw
+
+			font-family sansB
+			font-weight bold
+			fontVal(2.734375vw, 3.38541666vw)
+			color #000
+			
+		&__paragraph
+			margin-bottom 6.380208333vw
+			
++above(1199px)
+	.headline
+		position relative
+		padding 89.1px 194px 0
+
+		text-align center
+		fontVal(21.9px, 40.6px)
+		overflow hidden
+		box-shadow 0 -1px 0 0 #fff
+		
+		&:after
+			display none
+			
+		&__tagline
+			margin-bottom 43.7px
+
+			font-family sansB
+			font-weight bold
+			fontVal(32.8px, 40.6px)
+			color #000
+			
+		&__paragraph
+			margin-bottom 76.6px

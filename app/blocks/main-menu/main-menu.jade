@@ -1,0 +1,18 @@
+mixin main-menu()
+	+b('nav').main-menu&attributes(attributes)
+		div.main-menu__btn-burger.btn-burger
+			svg.btn-burger__svg
+				use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_menu')
+		div.main-menu__btn-cross.btn-cross
+			svg.btn-cross__svg
+				use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_cross')
+		nav.main-menu__nav
+			ul.main-menu__list
+				li.main-menu__item Информация
+				li.main-menu__item Фото и видео
+				li.main-menu__item.main-menu__logo.logo
+					svg.logo__svg
+						use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_logo-bg')
+					img(src="assets/images/logo-sedona@1x.png" srcset="assets/images/logo-sedona@2x.png 2x").logo__img
+				li.main-menu__item Карта штата
+				li.main-menu__item Гостиницы

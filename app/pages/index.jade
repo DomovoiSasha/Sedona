@@ -1,0 +1,32 @@
+extends /blocks/layout-default/layout-default
+include /blocks/main-menu/main-menu
+include /blocks/banner/banner
+include /blocks/headline/headline
+include /blocks/reason-1/reason-1
+include /blocks/reason-2/reason-2
+include /blocks/reason-3/reason-3
+include /blocks/reason-4/reason-4
+include /blocks/reason-5/reason-5
+include /blocks/chips/chips
+include /blocks/search-form/search-form
+include /blocks/main-footer/main-footer
+
+block head
+	- var pageTitle = 'Sedona';
+
+block content
+	header.main-header
+		+main-menu
+		+banner
+	main.main-content
+		+headline
+		section.reasons
+			+reason-1
+			+chips
+			+reason-2
+			div.reasons__inline-box
+				+reason-3
+				+reason-4
+				+reason-5
+		+search-form
+	+main-footer
